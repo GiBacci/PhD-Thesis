@@ -1,0 +1,185 @@
+%==================================================================================================
+%   LUKES THESIS TEMPLATE 1.2
+%   -------------------------
+%   This template is based upon the offcial IMM PhD Thesis template, it is enhanced with a number
+%   of new features and a number of errors have fixed. This template is intended to be complied to
+%   PDF using PDFLATEX and is tested using the MiKTeX 2.9 LaTeX distribution.
+%   It is based on the official DTU-IMM Thesis template by Finn Kuno Christensen in 2009.
+%   Small bugfixes by Kasper Laursen in 2012.
+%   -------------------------
+%   Last Updated: 2012-09-19
+%   Contact: lthhe@imm.dtu.dk
+%
+%	Edited by Emilio Potenza & Marco Galardini
+%==================================================================================================
+%
+%==================================================================================================
+% DOCUMENT SETUP
+%==================================================================================================
+\documentclass[12pt,twoside]{book}                  %Official DTU-IMM Thesis document setup
+%
+%Set to 'print' for printed version, use 'net' for online version
+\def\thesisversion{print}
+%
+%==================================================================================================
+% PACKAGES
+%==================================================================================================
+\usepackage{LukeThesis}                             %Import Thesis base style
+%input{PhDMacros}
+\input{ThumbMacros}                                   %Thesis specific macros
+%
+%==================================================================================================
+% MANUAL EMILIO, GALA & GIOVANNI :)
+%==================================================================================================
+\usepackage{mathptmx}
+\usepackage{svg}
+\linespread{1.15}
+
+
+%
+%==================================================================================================
+% THESIS PROPERTIES (Modifiy these fields with your details)
+%==================================================================================================
+\def\thesisauthor{Giovanni Bacci}                     %Author
+\def\thesistitle{}  %Title
+\def\thesishandin{31 December}                       %Submission date (Day-Month}
+\def\thesisdegree{PhD}                              %Degree ('B.Eng', 'B.Sc.', 'M.Sc.' or 'PhD')
+\def\thesisyear{2014}                               %Submission year
+\def\thesisnumber{1}                             %DTU-IMM Serial number (do not include year
+\def\thesisISSN{1}                          %ISSN number
+
+\def\thesiskeywords{}  %PDF keywords
+\derivethesisprops                                  %Derive dependent properties
+%
+%==================================================================================================
+% SECTION NUMBERING SETUP
+%==================================================================================================
+\setcounter{tocdepth}{3}                            %2 adds sections up to subsections
+\setcounter{secnumdepth}{3}                         %Subsubsections get a number when this is 3
+%
+%==================================================================================================
+% THESIS STRUCTURE  (Modifiy to include more chapters etc)
+%==================================================================================================
+\begin{document}
+%------------------------
+%Pre-frontmatter material
+%------------------------
+
+\prefrontmatter
+
+\normalsize
+%--------------------
+%Frontmatter material
+%--------------------
+\frontmatter
+\pagenumbering{roman}                               %Set frontmatter numbering style
+
+
+\input{Acknowledgements}                            %Acknowledgements
+\markboth{}{}                                       %Set headings (left)(right)
+
+\input{Publications}									%Publication list
+\markboth{}{}
+
+\input{SummaryUK}                                   %English summary of Thesis
+\markboth{}{}                                       %Set headings (left)(right)
+
+%\input{SummaryIT}                                   %Italian summary of Thesis
+%\markboth{}{}                                       %Set headings (left)(right)
+
+
+%------------------
+% Table of contents
+%------------------
+
+\newpage\mbox{}\newpage
+\chaptermark{Contents}
+\pdfbookmark{\contentsname}{toc}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\sectionmark{Contents}
+\addtolength{\parskip}{-\baselineskip}
+\tableofcontents
+\addtolength{\parskip}{\baselineskip}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+
+%------------------
+% List of figures
+%------------------
+
+\newpage\mbox{}\newpage
+\chaptermark{Figures list}
+\pdfbookmark{Figures list}{toc}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\sectionmark{Figures list}
+\addtolength{\parskip}{-\baselineskip}
+\listoffigures
+\addtolength{\parskip}{\baselineskip}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+
+%------------------
+% List of figures
+%------------------
+
+\newpage\mbox{}\newpage
+\chaptermark{Tables list}
+\pdfbookmark{Tables list}{toc}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\sectionmark{Tables list}
+\addtolength{\parskip}{-\baselineskip}
+\listoftables
+\addtolength{\parskip}{\baselineskip}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+
+%-------------
+% Main content
+%-------------
+
+\mainmatter
+\part{Introduction}
+\newthumb
+\include{Chapter1}                                  %Introduction
+
+\stopthumb
+\mainmatter
+\part{Results}
+\newthumb
+\include{Chapter2}								
+
+\mainmatter
+\newthumb
+\include{Chapter3}									
+
+\mainmatter
+\newthumb
+\include{Chapter4}
+
+\mainmatter
+\newthumb
+\include{Chapter5}
+
+\mainmatter
+\newthumb
+\include{Chapter6}
+
+\mainmatter
+\newthumb
+\include{Chapter7}
+
+\stopthumb
+\mainmatter
+\part{Conclusions}
+\newthumb
+\include{Conclusions}									% Conclusions									
+
+\stopthumb
+\mainmatter
+\part{Appendices}
+\appendix
+\newthumb
+\include{Appendix1}                                 %Appendix A
+\mainmatter
+\newthumb
+\include{Appendix2}									%Appendix B
+
+\end{document}
+% % % EOF % % %

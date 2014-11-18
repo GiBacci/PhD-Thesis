@@ -1,0 +1,265 @@
+%==================================================================================================
+% LUKE PHD THESIS LAYOUT STYLE FILE
+% ---------------------------------
+% Based upon work by: Henrik Aalborg Nielsen, Thomas Fabricius, Jan Larsen and Finn Kuno
+% Christensen
+% Contact: Luke Herbert (lthhe@imm.dtu.dk)
+%==================================================================================================
+\typeout{----------------------------------------------------}
+\typeout{Emilio Potenza UNIFI MOD - LUKE PHD THESIS LAYOUT}
+\typeout{----------------------------------------------------}
+%
+%==================================================================================================
+% BASE PACKAGES
+%==================================================================================================
+\usepackage[format=plain,labelfont=bf,up,textfont=up,small]{caption}							%Smaller captions
+\usepackage[utf8]{inputenc}                         %Allows input of tex files encoded in UTF8
+\usepackage[T1]{fontenc}                            %Set font encoding for output PDF
+\usepackage[sort]{cite}
+\usepackage{chapterbib}
+\usepackage[italian,english]{babel}                 %Allows langauge switching (English is default)
+\usepackage{graphicx}                               %Support for including graphics
+\usepackage{xcolor}                                 %Support for using colours
+%\usepackage[hang,normalsize,bf]{caption}            %Make pretty captions
+\usepackage{varioref}                               %Enhances references (\vref {label})
+\usepackage{fancyhdr}                               %Pretty headers/footers
+\usepackage{hyperref}                               %References package
+\usepackage{amsmath,amssymb,latexsym}               %AMS and other symbols
+\usepackage{epic,eepic,epsfig,graphics,psfrag}      %Figure/picture packages
+\usepackage{theorem}                                %Allows creation of custom enviroments
+\usepackage{ragged2e}
+\usepackage[strict]{changepage}
+\usepackage{pdfpages}								%Insert
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{fixltx2e}
+\usepackage{booktabs}
+\usepackage{rotating}
+
+
+
+% ****************************************************************************************************
+% 4. Setup floats: tables, (sub)figures, and captions
+% ****************************************************************************************************
+\usepackage{tabularx} % better tables
+	\setlength{\extrarowheight}{3pt} % increase table row height
+\newcommand{\tableheadline}[1]{\multicolumn{1}{c}{\spacedlowsmallcaps{#1}}}
+\newcommand{\myfloatalign}{\centering} % to be used with each float for alignment
+%\usepackage{caption}
+%\captionsetup{format=hang,font=small}
+\usepackage{subfig}  
+%
+
+% Smaller Bibliography
+\usepackage[numbers]{natbib}
+\renewcommand{\bibfont}{\footnotesize}
+%==================================================================================================
+% PAGE GEOMETRY
+%==================================================================================================
+\addtolength{\parskip}{\baselineskip}
+\setlength{\parindent}{0pt}
+\pagestyle{myheadings}
+\setlength{\paperwidth}{182mm}  %b5
+\setlength{\paperheight}{257mm} %b5
+\setlength{\textheight}{182mm}
+\setlength{\voffset}{-5mm} 
+\setlength{\topmargin}{5mm}
+\setlength{\headheight}{8mm}
+\setlength{\headsep}{7mm}
+\setlength{\footskip}{10.0mm}
+\setlength{\textwidth}{131mm}  
+
+\setlength{\oddsidemargin}{3.5mm} % 1 inch + 4.6 mm = 30 mm inside RILEGATURA
+\setlength{\evensidemargin}{-3.5mm} % 1 inch - 0.4 mm = 25 mm outside
+\setlength{\marginparsep}{4mm}  		%Sep Note laterali
+\setlength{\marginparwidth}{16mm}       %Dimensione note laterali
+
+
+%==================================================================================================
+% HEADINGS SETUP
+%==================================================================================================
+\pagestyle{fancyplain}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\lhead[\fancyplain{}{\bfseries\thepage}]%
+      {\fancyplain{}{\bfseries\rightmark}}
+\rhead[\fancyplain{}{\bfseries\leftmark}]%
+      {\fancyplain{}{\bfseries\thepage}}
+\cfoot{}
+%
+%==================================================================================================
+% GENERATE DERIVED THESIS PROPERTIES
+%==================================================================================================
+\newcommand{\derivethesisprops}{
+   \def\ttitle{{\textbf{\thesistitle}}}
+   \def\thesisdef{GMPF-\thesisdegree-\thesisyear-\thesisnumber}
+   \def\printversion{print}
+   \ifx\thesisversion\printversion
+      \special{papersize=176mm,250mm}               %DTU-IMM special paper size
+      \hypersetup{pdftitle={\thesistitle},
+         pdfauthor={\thesisauthor},
+         pdfsubject={\thesisdef},
+         pdfkeywords={\thesiskeywords},
+         breaklinks,
+         bookmarksopen,
+         bookmarksnumbered,
+         plainpages=false}
+      \else
+      \hypersetup{pdftitle={\thesistitle},
+         pdfauthor={\thesisauthor},
+         pdfsubject={\thesisdef},
+         pdfkeywords={\thesiskeywords},
+         colorlinks,
+         linkcolor=blue,
+         breaklinks,
+         bookmarksopen,
+         bookmarksnumbered,
+         plainpages=false}
+   \fi
+}
+
+
+%
+%
+%
+\definecolor{light-gray}{gray}{0.70}
+%
+%==================================================================================================
+% GENERATE PREFRONTMATTER
+%==================================================================================================
+\newcommand{\prefrontmatter}{
+   
+   \thispagestyle{empty}                               %Front page (inside cover)
+   \changepage{5cm}{2cm}{-1cm}{-1cm}{0cm}{-1.3cm}{-1.3cm}{0cm}{0cm}
+   
+
+   \pagenumbering{alph}                                %Set prefrontmatter numbering style
+   
+
+   \justifying
+   \normalsize
+   \changepage{-5cm}{-2cm}{1cm}{1cm}{0cm}{+1.3cm}{+1.3cm}{0cm}{0cm}
+   \thispagestyle{empty}
+   
+   \textbf{Declaration} \\
+
+\textit{I hereby declare that this submission is my own work and that, to the best of my knowledge and belief, it contains no material previously published or written by another person nor material which to a substantial extent has been accepted for the award of any other degree or diploma of the university or other institute of higher learning, except where due acknowledgment has been made in the text. 
+A copy of the thesis will be available at DISPAA from January 1st 2015} \\
+
+\textbf{Dichiarazione} \\
+
+\textit{Con la presente affermo che questa tesi è frutto del mio lavoro e che, per quanto io ne sia a conoscenza, non contiene materiale precedentemente pubblicato o scritto da un'altra persona né materiale che è stato utilizzato per l’ottenimento di qualunque altro titolo o diploma dell'Università o altro istituto di apprendimento, a eccezione del caso in cui ciò venga riconosciuto nel testo. 
+Una copia della tesi sarà disponibile presso il DISPAA dal 1 Gennaio 2015}\\\vspace{\fill}
+
+%==================================================================================================
+% SIGNATURE AREA
+%==================================================================================================
+\vspace{\fill}
+\begin{flushright}
+    \textit{Firenze}, \textbf{\thesishandin} \textbf{\thesisyear}\\
+    \thesisauthor\\
+%  	\includegraphics[height=1cm]{figures/SignatureDummy}
+    
+\end{flushright}
+
+\justifying
+\newpage
+   }
+   
+   
+%
+%==================================================================================================
+% ENVIROMENTS SETUP
+%==================================================================================================
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{proposition}[lemma]{Proposition}
+\newtheorem{theorem}[lemma]{Theorem}
+\newtheorem{corollary}[lemma]{Corollary}{\theorembodyfont{\rmfamily}
+\newtheorem{definition}[lemma]{Definition}}\theoremheaderfont{\scshape\bfseries}
+\newenvironment{proof}{{\scshape Proof.}}{}
+\newcommand{\qed}{\hfill $\square$ \vspace{5mm}}
+\newtheorem{example}{Example}[chapter]
+%
+%==================================================================================================
+% CHAPTER AND APPENDIX STYLING SETUP
+%==================================================================================================
+\renewcommand{\partname}{P a r t }
+\renewcommand{\chaptername}{C h a p t e r }
+\renewcommand{\appendixname}{A p p e n d i x }
+\newif\iflogvar
+%
+\def\@makechapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedright \normalfont
+   \ifnum \c@secnumdepth >\m@ne
+   
+     \iflogvar
+        %Appendix
+        \begin{tabular}{ r l }
+            \begin{minipage}[t]{0.30\columnwidth}
+            \centering
+            \huge
+   			\color{light-gray}{\@chapapp} \\*[0.3cm] 
+   			\fontsize{60}{1}\selectfont \color{light-gray}{\thechapter}
+   			\end{minipage} & 
+   			\begin{minipage}[t]{0.60\columnwidth}
+   			\color{black} \raggedleft \huge  #1
+   			\end{minipage}\\
+		\end{tabular}
+        \par\nobreak
+        \vskip 20\p@
+    
+    \else
+      \if@mainmatter
+      %MAIN CHAPTERs
+        %\raggedright \fontsize{100}{1}\selectfont 
+        %\color{light-gray}{ \upshape\thechapter} \color{black}
+        \begin{tabular}{ r l }
+            \begin{minipage}[t]{0.175\columnwidth}
+   			\fontsize{100}{1}\selectfont \color{light-gray}{\thechapter}
+   			\end{minipage} & 
+   			\begin{minipage}[t]{0.75\columnwidth}
+   			\color{black} \raggedleft \huge  #1
+   			\end{minipage}\\
+		\end{tabular}
+        %\large\scshape \@chapapp \space\space \Huge\upshape\thechapter 
+        \par\nobreak
+        \vskip 20\p@
+       \else
+         %all the other...
+         \huge  #1    
+      \fi
+     
+     \fi
+
+    \fi
+    \interlinepenalty\@M
+    %\flushleft\parbox{\textwidth}{\raggedleft \Huge  #1}
+     \par\nobreak
+     \vskip 15pt
+     \hrule height 0.4pt
+    \vskip 80\p@
+  }}
+%
+\def\@makeschapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \interlinepenalty\@M
+     \huge  #1
+     \par\nobreak
+     \vskip 15pt
+     \hrule height 0.4pt
+    \vskip 80\p@
+  }}
+
+\newcommand{\degree}{\ensuremath{^\circ}}
+
+\def\mainmatter{%
+  \cleardoublepage
+  \@mainmattertrue
+  \pagenumbering{arabic}
+  \def\mainmatter{\cleardoublepage\@mainmattertrue}
+}
+
+
+% % % EOF % % %
