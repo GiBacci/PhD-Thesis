@@ -38,6 +38,9 @@ float, wrapfig}                                     %Figure/picture packages. fl
 \usepackage{fixltx2e}
 \usepackage{booktabs}
 \usepackage{rotating}
+\usepackage{enumitem}                              % Mod by Giovanni Bacci - package for reducing space between item in a list
+
+
 
 \usepackage{wrapfig}
 
@@ -51,7 +54,9 @@ float, wrapfig}                                     %Figure/picture packages. fl
 \newcommand{\myfloatalign}{\centering} % to be used with each float for alignment
 %\usepackage{caption}
 %\captionsetup{format=hang,font=small}
-\usepackage{subfig}  
+\usepackage{subfig}
+
+\usepackage[font=footnotesize,labelfont=bf]{caption}            % Caption mod by Giovanni Bacci
 %
 
 % Smaller Bibliography
@@ -145,30 +150,23 @@ float, wrapfig}                                     %Figure/picture packages. fl
    \changepage{-5cm}{-2cm}{1cm}{1cm}{0cm}{+1.3cm}{+1.3cm}{0cm}{0cm}
    \thispagestyle{empty}
    
-   \textbf{Declaration} \\
-
-\textit{I hereby declare that this submission is my own work and that, to the best of my knowledge and belief, it contains no material previously published or written by another person nor material which to a substantial extent has been accepted for the award of any other degree or diploma of the university or other institute of higher learning, except where due acknowledgment has been made in the text. 
-A copy of the thesis will be available at DISPAA from January 1st 2015} \\
-
-\textbf{Dichiarazione} \\
-
-\textit{Con la presente affermo che questa tesi è frutto del mio lavoro e che, per quanto io ne sia a conoscenza, non contiene materiale precedentemente pubblicato o scritto da un'altra persona né materiale che è stato utilizzato per l’ottenimento di qualunque altro titolo o diploma dell'Università o altro istituto di apprendimento, a eccezione del caso in cui ciò venga riconosciuto nel testo. 
-Una copia della tesi sarà disponibile presso il DISPAA dal 1 Gennaio 2015}\\\vspace{\fill}
+   \input{Declaration}
 
 %==================================================================================================
 % SIGNATURE AREA
 %==================================================================================================
-\vspace{\fill}
-\begin{flushright}
-    \textit{Firenze}, \textbf{\thesishandin} \textbf{\thesisyear}\\
-    \thesisauthor\\
-%  	\includegraphics[height=1cm]{figures/SignatureDummy}
-    
-\end{flushright}
+%\vspace{\fill}
+%\begin{flushright}
+%    \textit{Firenze}, \textbf{\thesishandin} \textbf{\thesisyear}\\
+%    \thesisauthor\\
+%%  	\includegraphics[height=1cm]{figures/SignatureDummy}
+%    
+%\end{flushright}
 
 \justifying
 \newpage
-   }
+
+}
    
    
 %
