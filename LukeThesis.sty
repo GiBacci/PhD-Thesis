@@ -23,7 +23,8 @@
 %\usepackage[hang,normalsize,bf]{caption}            %Make pretty captions
 \usepackage{varioref}                               %Enhances references (\vref {label})
 \usepackage{fancyhdr}                               %Pretty headers/footers
-\usepackage{hyperref}                               %References package
+\usepackage{hyperref}                              %References package
+\usepackage{url}
 \usepackage{amsmath,amssymb,latexsym}               %AMS and other symbols
 \usepackage{
 epic, eepic, epsfig,
@@ -167,7 +168,24 @@ float, wrapfig}                                     %Figure/picture packages. fl
 \newpage
 
 }
+
+%==================================================================================================
+% GENERATE FRONT
+%==================================================================================================
+
+\newcommand{\preprefrontmatter}{
    
+	\thispagestyle{empty}                               %Front page (inside cover)      
+	\pagenumbering{alph}                                %Set prefrontmatter numbering style   
+	\justifying
+	\normalsize
+	\thispagestyle{empty}
+	
+	\includepdf[pages=-,offset=10mm 0, scale=0.9]{./front.pdf}
+	
+	\newpage
+
+}   
    
 %
 %==================================================================================================
