@@ -3,6 +3,13 @@
 \chapter{Small tools for big data}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Working with metagenomic data involves the need to handle huge amounts of data obtained from different conditions and environments. Dealing with these ``big data'' is a non-trivial task both from a biological and computation point of view. Indeed, the collection and storage of metagenomic data requires significant infrastructure and have greatly benefited from the use of cloud computing. The global information storage capacity has almost doubled every four years since the 1980s, collecting larger and larger data sets both from genomic and metagenomic projects. New databases (like SRA) make raw DNA sequences and other primary data available to researchers and represent new insights waiting to be found. However, what are needed now are robust analysis tools able to mine the data to find new insights among members of bacterial communities, informing on their chemistry and biology. For this reason ``big data'' analytic tools will be an invaluable resource for deeply understanding microbiome data in order to develop new solutions to global health problems and provide new insights into microbiology.\\
+The topic described above were addressed in the following papers:
+\vspace{-5mm}
+\begin{itemize}[nosep]
+\item \textbf{Bacci, G.} (2015). Raw Sequence Data and Quality Control. In \textit{Bacterial Pangenomics} (pp. 137-149). Springer New York.
+\item \textbf{Bacci, G.}, Bani, A., Bazzicalupo, M., Ceccherini, M.T., Galardini, M., Nannipieri, P., Pietramellara, G., \& Mengoni, A. Evaluation of the performances of Ribosomal Database Project (RDP) Classifier for taxonomic assignment of 16S rRNA metabarcoding sequences generated from Illumina-Solexa NGS. Manuscripts in press in \textit{Journal of Genomics}.
+\item \textbf{Bacci, G.}, Bazzicalupo, M., Benedetti, A., \& Mengoni, A. (2014). StreamingTrim 1.0: a Java software for dynamic trimming of 16S rRNA sequence data from metagenetic studies. \textit{Molecular ecology resources}, 14(2), 426-434.
+\end{itemize}
 
 
 \section{Raw Sequence Data and Quality Control}
@@ -53,7 +60,7 @@ In conclusion, Illumina reads, shorter than 200 nt, can be classified using one 
 This work was supported by a grant from the Ente Cassa di Risparmio di Firenze (Grant n{\textdegree} 2010/4384 ``Centro di Metagenomica del suolo'') and by a fellowship to GB from MIPAAF.
 
 \section{StreamingTrim 1.0: a Java software for dynamic trimming of 16S rRNA sequence data from metagenetic studies}
-The so-called barcode or metagenetic applications, based on PCR amplicon library sequencing, are very popular at present. One big problem, related to the utilization of amplicon data, is the analysis of reads quality and the removal of low-quality regions without deleting entire sequences which can be useful for subsequent analyses (e.g. taxonomic assignment). Here, we present StreamingTrim, a DNA reads trimming software, written in Java, that allows researchers to analyse the quality of DNA sequences in fastq files searching and removing low-quality regions in a very conservative way.\\
+The so-called barcode or metagenetic applications, based on PCR amplicon library sequencing, are very popular at present time. One big problem, related to the utilization of amplicon data, is the analysis of reads quality and the removal of low-quality regions without deleting entire sequences which can be useful for subsequent analyses (e.g. taxonomic assignment). Here, we present StreamingTrim, a DNA reads trimming software, written in Java, that allows researchers to analyse the quality of DNA sequences in fastq files searching and removing low-quality regions in a very conservative way.\\
 \newpage
 \includepdf[pages=-,offset=10mm 0, scale=0.9]{articles/StremingTrim.pdf}
 \newpage
