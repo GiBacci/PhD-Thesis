@@ -186,6 +186,29 @@ float, wrapfig}                                     %Figure/picture packages. fl
 	\newpage
 
 }   
+
+\newcommand{\fancyprefrontmatter}{
+	\thispagestyle{empty}                               %Front page (inside cover)      
+	\pagenumbering{alph}                                %Set prefrontmatter numbering style   
+	\justifying
+	\normalsize
+	\thispagestyle{empty}
+	
+	\input{Front}
+	\newpage
+
+}
+
+\newcommand{\coverfrontmatter}{
+   
+	\thispagestyle{empty}                               %Front page (inside cover)      
+	\pagenumbering{alph}                                %Set prefrontmatter numbering style   
+	\justifying
+	\normalsize
+	\thispagestyle{empty}
+	\includepdf[pages=-, offset=0 5]{./cover.pdf}	
+
+}    
    
 %
 %==================================================================================================

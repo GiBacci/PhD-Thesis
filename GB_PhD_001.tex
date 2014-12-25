@@ -16,7 +16,7 @@
 %==================================================================================================
 % DOCUMENT SETUP
 %==================================================================================================
-\documentclass[12pt,twoside]{book}                  %Official DTU-IMM Thesis document setup
+\documentclass[11pt,twoside]{book}                  %Official DTU-IMM Thesis document setup
 %
 %Set to 'print' for printed version, use 'net' for online version
 \def\thesisversion{print}
@@ -69,8 +69,9 @@
 %------------------------
 %Pre-frontmatter material
 %------------------------
-
-\preprefrontmatter
+%\preprefrontmatter
+\coverfrontmatter
+\fancyprefrontmatter
 \prefrontmatter
 
 \normalsize
@@ -90,8 +91,8 @@
 \input{SummaryUK}                                   %English summary of Thesis
 \markboth{}{}                                       %Set headings (left)(right)
 
-%\input{SummaryIT}                                   %Italian summary of Thesis
-%\markboth{}{}                                       %Set headings (left)(right)
+\input{SummaryIT}                                   %Italian summary of Thesis
+\markboth{}{}                                       %Set headings (left)(right)
 
 
 %------------------
