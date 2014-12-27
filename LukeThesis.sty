@@ -196,7 +196,7 @@ float, wrapfig}                                     %Figure/picture packages. fl
 	
 	\input{Front}
 	\newpage
-
+	\newpage\null\thispagestyle{empty}\newpage
 }
 
 \newcommand{\coverfrontmatter}{
@@ -206,7 +206,7 @@ float, wrapfig}                                     %Figure/picture packages. fl
 	\justifying
 	\normalsize
 	\thispagestyle{empty}
-	\includepdf[pages=-, offset=0 5]{./cover.pdf}	
+	\includepdf[pages=-, offset=0 -14]{./cover.pdf}	
 
 }    
    
