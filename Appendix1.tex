@@ -1,8 +1,10 @@
 \logvartrue
 \chapter{Appendix 1}
 
-\section{Evolution of intra-specific regulatory networks in a multipartite bacterial genome}
-\subsection{Abstract}
+\section[Evolution of intra-specific regulatory networks in a multipartite bacterial genome]{Evolution of intra-specific regulatory networks in a multipartite bacterial genome%
+\sectionmark{Evolution of intra-specific regulatory networks}}
+\sectionmark{Evolution of intra-specific regulatory networks}
+
 The gene regulatory network is an important step in the understanding of how organisms precisely control the expression of gene products and therefore phenotypes. Recent studies have pointed out the importance of regulatory networks plasticity in bacterial adaptation and evolution. The evolution of such networks within and outside the species boundary is still obscure though. \textit{Sinorhizobium meliloti} is an ideal species for such study, having three large replicons, many genomes available and a significant knowledge of its TFs. Each replicon has a specific functional and evolutionary mark which might also emerge from their regulatory signature.\\
 Here we study the plasticity of the regulatory network within and outside the \textit{S. meliloti} species, looking for the presence of 41 TFs binding motifs in 51 strains and 5 related rhizobial species. We detected preference of several TFs for one of the replicons, and the function of regulated genes was in accordance with the overall replicon functional signatures: house-keeping functions for the chromosome, metabolism  for the chromid, symbiosis functions for the megaplasmid, thus suggesting a replicon-specific wiring of the regulatory network in the \textit{S. meliloti} species. At the same time a significant part of the predicted regulatory network is shared between the chromosome and the chromid, thus adding an additional layer by which the chromid integrates itself in the core genome.\\
 Furthermore, the regulatory network distance was found to be correlated with both promoter regions and dispensable genome evolution inside the species, indicating that both pangenome compartments are involved in the regulatory network evolution. Indeed, genes of the dispensable regulon missing both a TFBS and its cognate TF were shown to likely belong to the dispensable genome, possibly due to the relaxation of selective constraints. Regulatory interactions should then also be considered to predict evolutionary conservation and dynamics in bacterial pangenomes.\\
@@ -37,24 +39,24 @@ About 70\% of all the TFs encoded in the \textit{S. meliloti} pangenome belong t
 As expected, more TFs (16) were absent in at least one of the other five outgroups, many of whose orthologs are encoded in the \textit{S. meliloti} symbiotic megaplasmid pSymA (6 TFs out of 9 analysed), including two copies of NodD, FixJ, RctR, SyrM and RhrA (Figure SM1).\\
  Such difference between intraspecific and interspecific TF gene content may anticipate a similar difference at the downstream regulatory network, for the absence of cross-regulatory links.\\
 To ensure a high confidence in the TFBS predictions we selected the TF motifs with relatively high information content (see Materials and Methods).\\
-We observed a wide range of information gain for TFBSs; of the starting 83 TFBS retrieved from literature and databases, 41 have been found to have enough information content to reliably predict their TFBS (Figure~\ref{fig:reg1} (a), Table SM1).\\
+We observed a wide range of information gain for TFBSs; of the starting 83 TFBS retrieved from literature and databases, 41 have been found to have enough information content to reliably predict their TFBS (Figure~\ref{fig:reg1} (a), Table SM1).\\%
 \begin{figure}[!tb]
 	\centering
 	\includegraphics[width=1\textwidth]{./figures/Appendix_1/1_reg}
   	\caption{\label{fig:reg1} General characteristics of the presented TF predictions and quality control. a) Information content frequencies for the 41 analysed TFs: vertical line indicates the minimum information content, as measured for \textit{S. meliloti} strain Rm1021; b-c) comparison between TFBS predictions and the reported experimental results in strain Rm1021: the dashed horizontal line indicates the mean value for the TFs with information content higher than the minimum value; d) correlation between the TFs information content and the signal-to-noise ratio: vertical bars indicate the error level measured in all the strains.}
-\end{figure}
+\end{figure}%
 For FixJ two separate motifs acting together have been described \cite{ferrieres2002two}, one above and one slightly below the threshold: both motifs have been used.\\
 We applied a novel TFBS prediction approach to overcome common problems associated with the prediction algorithms and maximize accuracy and sensitivity \cite{van2009mechanisms}, including operon predictions to recover most of the downstream regulated genes (see Materials and methods).\\
  The predictions accuracy was determined with a comparison with the downstream regulons reported in the literature, when available (Figure~\ref{fig:reg1} (b and c)); the average accuracy of the predictions was found to be around 55\%, with a tendency to positively correlate with the motif information gain (Figure SM2).\\
 On the other hand, a relatively high number of downstream genes were predicted only in the literature.\\
 This behaviour may be explained by the fact that most regulons have been defined on the basis of gene expression data; since these experiments are not focused on genes directly under the control of a specific TF, many targets can be regulated by TFs which are downstream in the regulatory cascade and therefore cannot be predicted by our search strategy.\\
 Predicted TFBS in genes upstream regions against TFBS predicted in coding regions were considered a signal to noise ratio (upstream hits on total hits) to measure the predictions quality (Figure~\ref{fig:reg1} (d)); for more than 70\% of the analysed TF the observed ratio was above 50\%, with a very poor correlation with the motif information content.\\
-Taken together these results show that our predictions are of fairly good quality. We further experimentally confirmed some of the predictions on a subset of predicted promoters of the NodD regulon (Table SM2).\\
+Taken together these results show that our predictions are of fairly good quality. We further experimentally confirmed some of the predictions on a subset of predicted promoters of the NodD regulon (Table SM2).\\%
 \begin{figure}[!tb]
 	\centering
 	\includegraphics[width=0.7\textwidth]{./figures/Appendix_1/2_reg}
   	\caption{\label{fig:reg2} Variability in regulon size. Color intensity indicates the number of downstream regulated genes in each strain; gray squares indicate the TF absence in the genome of that particular strain. Blue squares indicate that there are more than 64 genes predicted to be under the control of the TF. TFs are colored according to the replicon they belong to: red for chromosome, green for the pSymA megaplasmid and blue for the pSymB chromid}
-\end{figure}
+\end{figure}%
 Little variability in the number of genes under the control of each TF was observed between the \textit{S. meliloti} strains (Figure~\ref{fig:reg2} and Table \ref{tab:regulonstats}).\\
 Each TF was predicted to control the transcription of about 12 genes in average, with RirA showing the largest regulon (71.6 genes average) and SyrM the smallest one, controlling the transcription of a single gene (1.1 average).\\
 \begin{table}[!ht]
@@ -180,28 +182,28 @@ Following the results of the pangenome analysis, the \emph{S. meliloti} and the 
  Intuitively, after some point, the divergence in upstream regions should be paralleled by a larger distance in the regulatory network, since the divergence in the sequence will at some point determine a loss/gain of TFBS and therefore have an impact on the structure of the regulatory network.
 
 Similarly, a larger difference in gene content should also be mirrored by a higher variability in the regulatory network, since new genes may be recruited in the network and TFs may be lost/gained.
- On the other hand, we don't expect to observe a strong correlation between coding sequences divergence and changes in the regulon; this is also due to the lower divergence at the coding level between strains, implying that regulon diversity inside a species should be driven by gene content variability and upstream sequences variability. 
+ On the other hand, we don't expect to observe a strong correlation between coding sequences divergence and changes in the regulon; this is also due to the lower divergence at the coding level between strains, implying that regulon diversity inside a species should be driven by gene content variability and upstream sequences variability. %
 \begin{figure}[!tb]
 	\centering
 	\includegraphics[width=1\textwidth]{./figures/Appendix_1/3_reg}
   	\caption{\label{fig:reg3} Correlations between pangenome diversity and regulatory network distances. R and S indicate the Pearson's and Spearman's correlation coefficients between the regulatory network and each pangenome partition distances. a) correlations inside the \textit{S. meliloti} species; and b) correlation between the outgroups}
-\end{figure}
+\end{figure}%
 These hypotheses on patterns of correlations between pangenome evolution and regulatory divergence were confirmed only at the species level (Figure~\ref{fig:reg3} (a)).
- The comparison between \textit{S. meliloti} strains showed that the distance in the regulatory network is correlated with both the distance in upstream regions and with gene content (the accessory genome); as expected, the divergence of coding regions showed no significant correlation with the regulatory network distance (Figure~\ref{fig:reg3} (a)). 
+The comparison between \textit{S. meliloti} strains showed that the distance in the regulatory network is correlated with both the distance in upstream regions and with gene content (the accessory genome); as expected, the divergence of coding regions showed no significant correlation with the regulatory network distance (Figure~\ref{fig:reg3} (a)). 
 Intriguingly, when considering the outgroup species, all three partitions of the pangenome (core, upstream and accessory) were found to be similarly correlated with the regulatory network distance (Figure~\ref{fig:reg3} (b)).
- Since the divergence in coding sequences cannot directly influence transcriptional regulation, we proposed that the most likely explanation of the observed very similar correlations is the overall genome divergence between species, which ultimately is reflected by a higher divergence at the regulatory network level.
- This is also confirmed by the high correlation between coding regions, upstream regions and dispensable genome (data not shown).
- We then concluded that the regulatory network evolution can be correlated with changes in promoter sequence and in the pangenome composition only at the species level, at least in \textit{S. meliloti}.
+Since the divergence in coding sequences cannot directly influence transcriptional regulation, we proposed that the most likely explanation of the observed very similar correlations is the overall genome divergence between species, which ultimately is reflected by a higher divergence at the regulatory network level.
+This is also confirmed by the high correlation between coding regions, upstream regions and dispensable genome (data not shown).
+We then concluded that the regulatory network evolution can be correlated with changes in promoter sequence and in the pangenome composition only at the species level, at least in \textit{S. meliloti}.
 
 \subsubsection{Evolutionary dynamics of regulatory networks at different phylogenetic distances}
 The dynamics of the evolution of the regulatory network showed remarkable differences between the intra- and inter-specific levels.
- Each observed regulatory interaction in the two datasets (\textit{S. meliloti} and the outgroups) and its state across all strains was used to build a hidden markov model (HMM) to infer the preferred state transitions in our predictions (see Materials and methods), that corresponds to the ways the gene regulatory network can grow and shrink.
- The possible states of a target gene depend on the presence of the TF, the target gene itself and the upstream TFBS.
+Each observed regulatory interaction in the two datasets (\textit{S. meliloti} and the outgroups) and its state across all strains was used to build a hidden markov model (HMM) to infer the preferred state transitions in our predictions (see Materials and methods), that corresponds to the ways the gene regulatory network can grow and shrink.
+The possible states of a target gene depend on the presence of the TF, the target gene itself and the upstream TFBS. %
 \begin{figure}[!tb]
 	\centering
 	\includegraphics[width=0.8\textwidth]{./figures/Appendix_1/4_reg}
   	\caption{\label{fig:reg4} Regulatory network dynamics. a) Graphical representation of the six states in which each regulatory link (a gene found with a TFBS in at least one genome) can be found in the \textit{S. meliloti} species and between the outgroup species; b) states probabilities and states transitions probabilities inside the \textit{S. meliloti} species: nodes and edges sizes are proportional to the probability in the model; c) states probabilities and states transitions probabilities between the outgroup species}
-\end{figure}
+\end{figure}%
  Then, each target gene can be found in one of six different states (Figure~\ref{fig:reg4} (a): the "plugged" state, the only functional one, which corresponds to a target gene with a TFBS in its promoter region and the TF present in the genome, and other five non-functional states.
  These states miss: i) the TFBS ("unplugged"), ii) the TF ("ready"), iii) both the TF and the TFBS ("not ready"), iv) the regulated gene ("absent") or v) both the TF and the gene itself ("missing").
 This HMM can be used to estimate the probability for state transitions, that is the probability of observing a change from one state to another in time.
@@ -220,12 +222,12 @@ On the contrary, when comparing wider taxonomic ranges, regulatory networks are 
 
 \subsubsection{Replicon-specific regulation and cross-regulation}
 Transcription factors with replicon preference were found to have functional signatures in accordance with the functions encoded in the three main replicons of \textit{S. meliloti}.
- Using a clustering approach on normalized gene hits on each replicon we have found that 19 TFs preferentially regulate genes belonging to one of the three replicons: five to the chromosome (NtrR, OxyR, NesR, ChvI and SMc03165), six to the pSymB chromid (SM-b21706, SM-b20667, ChpR, RbtR, SM-b21598 and SM-b21372) and eight to the symbiotic megaplasmid pSymA (SyrM, NodD3, RhrA, NodD1, NodD2, FixJ, FixK1 and NifA) (Figure~\ref{fig:reg5} (a)); these TFs are also encoded by the same replicon.
+ Using a clustering approach on normalized gene hits on each replicon we have found that 19 TFs preferentially regulate genes belonging to one of the three replicons: five to the chromosome (NtrR, OxyR, NesR, ChvI and SMc03165), six to the pSymB chromid (SM-b21706, SM-b20667, ChpR, RbtR, SM-b21598 and SM-b21372) and eight to the symbiotic megaplasmid pSymA (SyrM, NodD3, RhrA, NodD1, NodD2, FixJ, FixK1 and NifA) (Figure~\ref{fig:reg5} (a)); these TFs are also encoded by the same replicon. %
 \begin{figure}[!tb]
 	\centering
 	\includegraphics[width=1\textwidth]{./figures/Appendix_1/5_reg}
   	\caption{\label{fig:reg5} TFs preferentially associated with a replicon. a) K-means clustering of the normalized proportion of genes regulated in each replicon of \textit{S. meliloti}, visualized in a two-dimensional PCA; b) Variability in the number of regulatory links in the same replicon and between replicons. All differences are significant (t-test p-value $<$ 0.05)}
-\end{figure}
+\end{figure}%
 The six TFs located in the pSymB chromid (whose regulon is also preferentially located on pSymB) appear to mostly regulate the transport and metabolism of various carbon and nitrogen sources, including ribitol (RbtR), tagatose, sorbitol and mannitol (SM-b21372), ribose (SM-b21598), lactose (SM-b21706) and tartrate, succinate, butyrate and pyruvate (SM-b20667).
  The eight TFs present in the symbiotic megaplasmid pSymA (with regulons preferentially located on pSymA) were found to be involved in the regulation of key symbiotic processes, including nitrogenase synthesis and functioning through micro-aerophilia (FixJ, FixK1 and NifA), nod-factors biosynthesis (SyrM, NodD1, NodD2 and NodD3), and iron scavenging (RhrA).
 
